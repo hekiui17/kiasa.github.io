@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #d7d7d7, #a6a6a6);
+      transition: 0.5s;
+    }.dark {
+  background: #121212;
+  color: white;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #666;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+img {
+  width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  border: 4px solid #999;
+}
+
+h2 {
+  border-left: 5px solid #666;
+  padding-left: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #666;
+  color: grey;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: grey;
+}
+
+  </style>
+</head>
+<body><div class="toggle" onclick="toggleMode()">🌙 Mode</div><header>
+  <h1>𓏲๋࣭࣪My Profile˖🎐</h1>
+</header><div class="container">  <div class="card">
+    <img src="foto.jpg" alt="Foto">
+    <h2 style="text-align:center;"ָ֢>WELCOME TO MY PROFILE </h2>
+   ㅤㅤㅤㅤㅤㅤ⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖</h2>
+    <p style="text-align:center;">Saskiya Rahma Yanti</p>
+  </div>  <div class="card">
+    <h2>⋆.˚✮ Personal Data ✮˚.⋆</h2>
+    <p><b>Tanggal Lahir:</b> 17 maret 2011</p>
+    <p><b>Nomor HP:</b> 0838-6196-3134</p>
+    <p><b>Alamat:</b> Bener, Majenang, Jawa Tengah</p>
+    <p><b>Email:</b>saskiyarahmayanti17@gmail.com</p>
+    </p>ㅤㅤㅤㅤㅤㅤ🫧𓇼𓏲*ੈ✩₊˚🎐</p>
+  </div>  <div class="card">
+    <h2>📔 Pendidikan</h2>
+    <p> SD Bener 02<p>
+    <p> SMP Islam Majenang<p>
+    <p> SMK Komputama Majenang</p>
+     </p>ㅤㅤㅤㅤㅤㅤㅤ₊˚🎧📓✩</p>
+  </div>  <div class="card">
+    <h2> .𖥔 ݁ ˖skill.𖥔 ݁ ˖ </h2>
+    <ul>
+      <li>Menulis cerita 𓂃✍︎
+      <li>Membuat cover au⋆˚🐾˖°
+      <li>Mengedit vidio ⌯⌲
+      </ul>ㅤㅤㅤㅤㅤㅤㅤ𓍯𓂃𓏧♡</ul>
+    </ul>
+  </div>  <div class="card">
+    <h2> About Me!!.ᐟ</h2>
+    <p>Halo teman teman, kenalin nama aku saskiya rahma yanti biasa aku di panggil kia.Aku suka berinteraksi sama anak kecil,suka banget jail sama temen dan bisa dibilang extrovert,kalo makan harus nonton upin ipin wkwk.Suka kpop,nonton film/drama luar negeri,paling suka genre medis, thriller, dan komedi.
+    </p>
+    </p>ㅤㅤㅤㅤㅤㅤㅤㅤ𐦂𖨆𐀪𖠋</p>
+  </div>  <div class="card">
+    <h2>My Hobbiess</h2>
+    <ul>
+      <li>Baca au favorit</li>
+      <li>Nonton Drama 24/7</li>
+      <li>Menulis cerita </li>
+      <li>Dengerin lagu 
+      </li>
+      </li>ㅤㅤㅤ˖♪°𓇼🌊⋆🐚🫧</li>
+    </ul>
+  </div>  <div class="card">
+    <h2>Social Mediaᶻ 𝗓 𐰁</h2>
+    <a class="btn">IG @kya_mactha</a><br>
+    <a class="btn">Tiktok @hekiui</a>
+  </div></div><footer>
+  <p></p>
+</footer>ㅤㅤㅤㅤㅤㅤㅤ𓇼 ⋆.˚ 𓆉 𓆝 𓆡⋆.˚ 𓇼<script>
+function toggleMode() {
+  document.body.classList.toggle('dark');
+}
+
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50) {
+      card.classList.add('show');
+    }
+  });
+});
+</script></body>
+</html>
